@@ -64,3 +64,37 @@ This document describes the implementation details for the task manager applicat
 - Link to a github repository
 - README file, which explains technology stack decisions
 
+## Tests log
+
+`gulpfile.js` is developed and tested on OS X Yosemite Version 10.10.3 (14D136).
+
+```
+$ gulp -v
+CLI version 3.9.1
+$ node -v
+v5.6.0
+```
+
+`Task manager` is tested on the following browsers.
+
+- Chrome 48.0.2564.116 waiting [ok]
+- Chrome 48.0.2564.116 in progress [ok]
+- Chrome 48.0.2564.116 completed [ok]
+- Opera 35.0.2066.92 waiting [ok]
+- Opera 35.0.2066.92 in progress [ok]
+- Opera 35.0.2066.92 completed [ok]
+- Safari 8.0.6 (10600.6.3) waiting [ok]
+- Safari 8.0.6 (10600.6.3) in progress [ok]
+- Safari 8.0.6 (10600.6.3) completed [ok]
+- Chrome 49.0.2623.75 (64-bit) waiting [ok]
+- Chrome 49.0.2623.75 (64-bit) in progress [ok]
+- Chrome 49.0.2623.75 (64-bit) completed [ok]
+- Opera 34.0.2036.50 waiting [ok]
+- Opera 34.0.2036.50 in progress [ok]
+- Opera 34.0.2036.50 completed [ok]
+- MS Edge 25.10586.0.0 waiting [ok]
+- MS Edge 25.10586.0.0 in progress [ok]
+- MS Edge 25.10586.0.0 completed [ok]
+- MS Internet Explorer 11.103.10586.0 waiting [ok]
+- MS Internet Explorer 11.103.10586.0 in progress [ok]
+- MS Internet Explorer 11.103.10586.0 completed [ok]
