@@ -1,3 +1,33 @@
+# How to run the application?
+
+Install dependencies
+
+```
+$ npm install
+$ bower install
+```
+
+Install `gulp` and run one of the following
+
+```js
+// build the project for distribution
+$ gulp 
+// clean the project
+$ gulp clean 
+// build, watch and serve the project for development
+$ gulp serve 
+// build and serve the project for distribution
+$ gulp serve:dist 
+```
+
+`gulpfile.js` is developed and tested on OS X Yosemite Version 10.10.3 (14D136).
+
+```
+$ gulp -v
+CLI version 3.9.1
+$ node -v
+v5.6.0
+```
 # Development
 
 This document describes the implementation details for the task manager application defined below.
@@ -65,15 +95,6 @@ This document describes the implementation details for the task manager applicat
 - README file, which explains technology stack decisions
 
 ## Tests log
-
-`gulpfile.js` is developed and tested on OS X Yosemite Version 10.10.3 (14D136).
-
-```
-$ gulp -v
-CLI version 3.9.1
-$ node -v
-v5.6.0
-```
 
 `Task manager` is tested on the following browsers.
 
