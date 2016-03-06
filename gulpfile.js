@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
     babelify = require('babelify'),
-    watchify = require('watchify'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     buffer = require('vinyl-buffer'),
@@ -48,26 +47,7 @@ gulp.task('clean', function(){
   return del([c.tmp, c.dist]);
 });
 
-// gulp.task('transpile', function(){
-//   return gulp.src([c.src + '/**/*.js'])
-//     .pipe(babel({
-//       presets: ['es2015']
-//     }))
-//     .pipe(gulp.dest(c.tmp));
-// });
-
-// gulp.task('bundle', function(){
-//   return  browserify([path.join(c.tmp, c.app, c.main)]).bundle()
-//     .pipe(source(c.main))
-//     .pipe(buffer())
-//     .pipe(gulpif(c.production, uglify({ mangle : false })))
-//     .pipe(rename(c.main))
-//     .pipe(gulpif(c.production, gulp.dest(path.join(c.dist, c.app))))
-//     .pipe(gulpif(!c.production, gulp.dest(path.join(c.tmp, c.app))))
-// })
-
 gulp.task('browserify', function () {
-  // var bundler = !c.production ? watchify(browserify(path.join(c.src, c.app, c.main))) : browserify(path.join(c.src, c.app, c.main));
   return browserify(path.join(c.src, c.app, c.main))
     .transform("babelify", {presets: ["es2015"]})
     .bundle()
