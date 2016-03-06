@@ -1,0 +1,43 @@
+main {
+  @fontsize: 20px;
+  padding: 10px;
+  font-size: @fontsize;
+  
+  form {
+    display: flex;
+    input {
+      flex: 1 1 auto;
+      font-size: @fontsize;
+    }
+  }
+
+  .task {
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    align-items: baseline;
+    span {
+      flex-grow: 1;
+    }
+    select {
+      font-size: @fontsize;
+      border: none;
+      background: none;
+      &.completed {
+        color: #4C9C29;
+      }
+      &.waiting {
+        color: #9E3333;
+      }
+      &.inprogress{
+        color: #555871;
+      }
+    }
+    button {
+      font-size: 16px;
+      border: none;
+      border-radius: 3px;
+      background: #E04F4F;
+      color: #ECECEC;
+    }
+  }
+}

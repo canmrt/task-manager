@@ -1,0 +1,15 @@
+<main>
+  <form ng-submit="main.addTask()">
+    <input placeholder="Describe your task here and hit return..." ng-model="main.newTaskDescription" ng-disabled="saving" autofocus>
+  </form>
+
+  <div class="task" ng-repeat="task in main.tasks | filter : main.filter">
+    <span>{{task.description}}</span>
+    <label>
+      <select ng-change="main.updateTask(task)" ng-model="task.status" ng-class="{ 'waiting' : task.status == 'waiting', 'inprogress' : task.status == 'in progress', 'completed' : task.status == 'completed'}">
+        <option ng-repeat="status in main.enum" value="{{status}}">{{status}}</option>
+      </select>
+    </label> 
+    <button ng-click="main.deleteTask(task)">Delete</button>
+  </div>
+</main>
